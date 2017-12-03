@@ -1,0 +1,82 @@
+<div :class="[{'fullscreen': s_fullScreen},code_style]" class="v-note-wrapper markdown-body">
+        <!--工具栏-->
+        <div class="v-note-op" v-show="toolbarsFlag">
+            <s-md-toolbar-left ref="toolbar_left" :editable="editable" :d_words="d_words" @toolbar_left_click="toolbar_left_click" :toolbars="toolbars"
+                               @imgAdd="$imgAdd" @imgDel="$imgDel" @imgTouch="$imgTouch"/>
+            <s-md-toolbar-right ref="toolbar_right" :d_words="d_words" @toolbar_right_click="toolbar_right_click" :toolbars="toolbars"
+                                :s_subfield="s_subfield"
+                                :s_preview_switch="s_preview_switch" :s_fullScreen="s_fullScreen" :s_html_code="s_html_code"
+                                :s_navigation="s_navigation"/>
+        </div>
+	
+        <!--编辑展示区域-->
+        <div class="v-note-panel">
+            <!--编辑区-->
+            <div ref="vNoteEdit" @scroll="$v_edit_scroll" class="v-note-edit divarea-wrapper"
+                 :class="{'scroll-style': s_scrollStyle  , 'single-edit': !s_preview_switch && !s_html_code , 'single-show': (!s_subfield && s_preview_switch) || (!s_subfield && s_html_code)}" @click="textAreaFocus">
+                <!-- 单栏模式 html展示 -->
+                <!-- <div v-show="!s_preview_switch&&s_html_code&&!s_screen_phone" class="content-div">
+                    {{d_render}}
+                </div> -->
+                <!-- 单栏模式 渲染区域-->
+                <!-- <div ref="vNoteDivEdit" @keydown.enter="$auto_textarea_div_enter" @keyup="$auto_textarea_div_change"
+                     spellcheck="false" v-show="!s_preview_switch&&!s_html_code&&!s_screen_phone"
+                     class="content-div content-div-edit" :contenteditable="editable">
+                </div> -->
+                <div  class="content-input-wrapper">
+                    <!-- 双栏 -->
+                    <v-autoTextarea ref="vNoteTextarea" :placeholder="placeholder ? placeholder : d_words.start_editor" class="content-input" fontSize="15px"
+                                    lineHeight="1.5" v-model="d_value"></v-autoTextarea>
+                </div>
+            </div>
+            <!--展示区-->
+            <div :class="{'single-show': (!s_subfield && s_preview_switch) || (!s_subfield && s_html_code)}"
+                 v-show="s_preview_switch || s_html_code" class="v-note-show">
+                <div ref="vShowContent" v-html="d_render" v-show="!s_html_code"
+                     :class="{'scroll-style': s_scrollStyle}" class="v-show-content">
+                </div>
+                <div v-show="s_html_code" :class="{'scroll-style': s_scrollStyle}" class="v-show-content-html">
+                    {{d_render}}
+                </div>
+            </div>
+
+            <!--标题导航-->
+            <transition name="slideTop">
+                <div v-show="s_navigation" class="v-note-navigation-wrapper">
+                    <div class="v-note-navigation-title">
+                        {{d_words.navigation_title}}<i @click="toolbar_right_click('navigation')"
+                                                       class="fa fa-mavon-times v-note-navigation-close"
+                                                       aria-hidden="true"></i>
+                    </div>
+                    <div ref="navigationContent" class="v-note-navigation-content scroll-style">
+                    </div>
+                </div>
+            </transition>
+
+        </div>
+        <!--帮助文档-->
+        <transition name="fade">
+            <div ref="help">
+                <div @click="toolbar_right_click('help')" class="v-note-help-wrapper" v-if="s_help">
+                    <div @click.stop.prevent="" class="v-note-help-content markdown-body code-hybrid">
+                        <i @click.stop.prevent="toolbar_right_click('help')" class="fa fa-mavon-times" aria-hidden="true"></i>
+                        <div class="scroll-style v-note-help-show" v-html="d_help"></div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+        <!--阅读模式-->
+        <div :class="{'show': s_readmodel}" class="v-note-read-model scroll-style" ref="vReadModel">
+            <div class="v-note-read-content" v-html="d_render">
+            </div>
+            <!--标题导航-->
+            <!-- <div v-if="toolbars.navigation" v-show="s_navigation_full" class="v-note-navigation-wrapper">
+                 <div class="v-note-navigation-title">
+                     {{d_words.navigation_title}}<i @click="toolbar_right_click('navigationfull')"
+                                                    class="fa fa-mavon-times v-note-navigation-close" aria-hidden="true"></i>
+                 </div>
+                 <div ref="navigationContentFull" class="v-note-navigation-content scroll-style">
+                 </div>
+             </div>-->
+        </div>
+    </div>

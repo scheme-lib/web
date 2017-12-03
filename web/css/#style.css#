@@ -1,0 +1,83 @@
+.navbar-inverse {
+    background-color: #f4645f;
+    border-color: transparent;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+/* .navbar-brand{ */
+/*     height:60px; */
+/*     float: left; */
+/*     padding: 15px 15px; */
+/*     font-size: 18px; */
+/*     line-height: 30px; */
+/* } */
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size:17px;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: transparent;
+				      }
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #CA3131;
+}
+
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #aaa;
+}
+.btn-primary{
+    background-color: #ea6f5a;
+    border-color: #ea6f5a;
+}
+.btn-primary:hover{
+    color: #fff;
+    background-color: #ec6149;
+    border-color: #ea6f5a;
+}
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #ec6149;
+}
+
+.jumbotron{
+    background-color:white;
+    margin-top:20px;
+    padding-bottom:0px;
+    margin-bottom:40px;
+}
+.jumbotron p{
+    font-size:24px;
+}
+.duck{
+    width:100px;
+    height:100px;
+}
+
+.main{
+    min-height:200px;
+    width:100%;
+    margin-top: 80px;
+}
+
+
+.operator{
+    display:block;
+    margin-left: -15px;
+    margin-right:-30px;
+    margin-top:10px;
+    border:1px solid #a3a3a3;
+}

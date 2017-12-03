@@ -1,0 +1,130 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>scheme-lib</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/codemirror/5.30.0/codemirror.min.css" rel="stylesheet">
+    <!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="dist/css/index.css" rel="stylesheet">
+    <link href="css/markdown.css" rel="stylesheet">
+    <link href="css/editor.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/codemirror/5.30.0/theme/neat.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    
+    <!-- <script src="js/vue.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> --> <!--  -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
+    <script data-main="js/editorController.js" defer async="true" src="js/require.js"></script>
+    
+  </head>
+
+  <body>
+
+   
+    <div class="main" id="app" >
+      <div class="container md" >
+
+	<div class="row">
+	  <div v-show="!showFullEditor" :class="classTree"  class="md-tree">
+	    <tree v-on:select="select"  :node="root" length="1"></tree>
+	  </div>
+	  <div class="md-editor" :class="classEditor" >
+	    <div class="md-toolbar operator">
+	      <ul class="md-menu">
+		<li >
+		  <a @click="save"  class="save" >
+		    <i class="glyphicon glyphicon-floppy-save" ></i>
+		  </a>
+		  
+		</li>
+		
+		<li>
+		  <a @click="toggleEditor" href="javascript:;" title="编辑" >
+		    <i  class="glyphicon glyphicon-edit" ></i>
+		  </a>
+		</li>
+
+			
+		<li>
+		  <a @click="togglePreview" href="javascript:;" title="预览" >
+		    <i  class="glyphicon glyphicon-eye-open"></i>
+		  </a>
+		</li>
+		
+		<li>
+		  <a @click="toggleFullEditor" href="javascript:;" title="最大化编辑器" >
+		    <i  class="glyphicon  glyphicon-resize-small" ></i>
+		  </a>
+		</li>
+
+		<li>
+		  <a @click="toggleFullScreenEditor" href="javascript:;" title="全屏" >
+		    <i  class="glyphicon glyphicon-fullscreen" ></i>
+		  </a>
+		</li>
+		
+	      </ul>
+	      
+	    </div> 
+	    <editor :value="value" ref="md" :class-preview="classPreview" :class-text="classText" v-bind:show-edit='showEditor' :show-preview='showPreview' v-on:text-change="textChange" ></editor>
+	  </div>
+	</div>
+      </div>
+   </div>
+
+     <div class="container">
+       
+     </div>
+
+     <template id="tree">
+       <div class="trow">
+         <div :class="node.active ? 'tname active' : 'tname' " v-if="node.name">
+	   <i @click="toggle(node)" v-if="node.isFolder"  class="icon" :class="[node.open ? 'folder-open': 'folder']" ></i>
+	   <i @click="toggle(node)" v-if="!node.isFolder" class="icon file-text"></i>
+           <span @dblclick="edit(node)" @click="select(node)" :title="node.name" >{{ node.name }}</span>
+           <!-- <img src="/img/add.png" @click="add"/> -->
+           <!-- <img src="/img/del.png" @click="remove(node)"/> -->
+         </div>
+         <tree v-show="node.isFolder&&node.open" v-if="node.children.length" 
+               v-for="row in node.children"
+               :node="row"
+               :length="node.children.length">
+         </tree>
+       </div>
+     </template>
+
+
+
+    <footer class="footer">
+      <div class="container">
+	<p><a href="https://github.com/evilbinary/scheme-lib" target="_blank">Github项目地址</a> </p>
+        <p>Copyright © 2015-2020 evilbinary 2017</p>
+        </div>
+    </footer>
+    
+    
+    <script type="text/javascript" >
+
+      <!-- var mavonEditor = require('editor'); -->
+      <!-- console.log(mavonEditor); -->
+
+      
+    
+     
+    </script>
+     
+  </body>
+</html>

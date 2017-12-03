@@ -1,0 +1,127 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>scheme-lib</title>
+
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/editor.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="dist/css/index.css" rel="stylesheet">
+    <link href="css/markdown.css" rel="stylesheet">
+    <!-- <link href="dist/styles/color-brewer.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/color-brewer.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    
+    <!-- <script src="js/vue.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> --> <!--  -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
+    
+    <script data-main="js/app.js" defer async="true" src="js/require.js"></script>
+    
+  </head>
+
+  <body>
+
+
+   <nav class="navbar navbar-inverse navbar-fixed-top site-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">scheme-lib</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+		<li><a href="editor.html">文档</a>
+                </li>
+		<!-- <li><a href="find/">发现</a> -->
+                <!-- </li> -->
+		<li><a href="editor.html">编辑</a>
+                </li>
+                
+                <li><a href="docs/getting-started/">入门指南</a>
+                </li>
+		
+                <li><a href="docs/writing-a-lib/">库开发</a>
+                </li>
+                <li><a href="docs/faq/">常见问题</a>
+                </li>
+            
+                </ul>
+            </div>
+        </div>
+   </nav>
+   
+   <div class="jumbotron">
+     <div class="container">
+       
+
+       <div class="row">
+	 <div class="col-md-6">
+	   <h1>欢迎</h1>
+	   <p>scheme-lib世界上最强的库</p>
+	   <p><a class="btn btn-primary btn-lg" href="https://github.com/evilbinary/scheme-lib" role="button">查看源码</a>
+	     <a class="btn btn-primary btn-lg" href="https://github.com/evilbinary/scheme-lib" role="button">下载v1.0.2</a>
+	   </p>
+	   
+	 </div>
+	 <div class="col-md-4">
+	  
+	   <img class="duck" src="/img/duck.jpg"></img>
+	   <p>鸭子说你们都一边玩去。</p>
+
+	 </div>
+       </div>
+       
+   
+
+     </div>
+   </div>
+   
+   <div class="container">
+      <div id="editor">
+	<editor ref="md"  :value="value"  ></editor>
+      </div>
+   </div>
+
+     <div class="container">
+       
+     </div>
+
+
+    <footer class="footer">
+      <div class="container">
+	<p><a href="https://github.com/evilbinary/scheme-lib" target="_blank">Github项目地址</a> </p>
+        <p>Copyright © 2015-2020 evilbinary 2017</p>
+        </div>
+    </footer>
+    
+    
+    <script type="text/javascript" >
+
+      <!-- var mavonEditor = require('editor'); -->
+      <!-- console.log(mavonEditor); -->
+
+      
+    
+     
+    </script>
+     
+  </body>
+</html>

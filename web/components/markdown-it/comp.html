@@ -1,0 +1,9 @@
+<div class="md row">
+
+  <div v-show="showEdit" class="text" :class="classText" >
+    <textarea  class="textArea"  ref="text" v-bind:value="value"  @input="updateValue" @keydown="change"  v-model="text">
+    </textarea>
+  </div>
+  <div v-show="showPreview" class="preview" :class="classPreview" ref="result" v-html="html" >
+  </div>
+</div>

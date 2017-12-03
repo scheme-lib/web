@@ -1,0 +1,251 @@
+#editor {
+    /* margin: auto; */
+    /* height: 580px; */
+    /* height:600px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text{
+
+
+
+
+/* margin-left:40px; */
+
+
+
+
+height: 100%;
+
+
+
+
+display:block;
+
+
+
+
+margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.preview{
+    /* display:block; */
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    padding-top: 10px;
+    border:0px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.md{
+    /* width: 100%; */
+    /* height: 100%; */
+    /* display:flex; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+pre{
+border:0px;
+}
+.md-tree .trow:first-child{
+    margin-left:0px;
+}
+.trow{
+    margin-left:20px;
+    display:block;
+}
+.tname{
+    //background:red;
+   
+    //color:white;
+
+}
+.tname span{
+    margin:auto;
+    height:30px;
+    line-height:40px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display:block;
+    white-space:nowrap;
+}
+.tname i{
+    width:20px;
+    height:20px;
+    margin:auto;
+    float:left;
+    margin-top:10px;
+    margin-right:6px;
+}
+.trow .active{
+    color:red;
+}
+
+i.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.icon.folder {
+    background-image: url(/img/folder.png);
+    background-size:20px 20px;
+}
+.icon.folder-open {
+    background-image: url(/img/folder-open.png);
+    background-size:20px 20px;
+}
+.icon.file-text {
+    background-image: url(/img/file-text.png);
+    background-size:20px 20px;
+}
+
+.main{
+    margin-top:20px;
+}
+
+.md-editor{
+    border-radius: 4px;
+    border:1px solid #ddd;
+
+        margin-left:-15rpx;
+	margin-right:-15rpx;
+	
+}
+.md-editor textarea{
+    border:0px;
+    border-right: 1px solid #ccc;
+    outline:none;
+    padding-top:10px;
+}
+.md-toolbar{
+    border:0px;
+    border-bottom:1px solid #ddd;
+    display:block;
+
+}
+
+.md-toolbar .save{
+    margin:auto;
+}
+.md-menu{
+    margin: auto;
+    list-style: none;
+}
+.md-menu>li {
+    margin: 0;
+    padding: 5px 1px;
+    display: inline-block;
+    position: relative;
+}
+
+.md-menu>li>a {
+    outline: 0;
+    color: #666;
+    display: inline-block;
+    min-width: 24px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #fff;
+    transition: all 300ms ease-out;
+}
+.md-menu>li>a>.fa {
+    text-align: center;
+    display: block;
+    padding: 5px;
+}
+
+.container{
+    /* width:100%; */
+}
+
+
+
+
+.md{
+    width:100%;
+
+}
+.row{
+    margin:auto;
+}
+.col-md-10{
+    margin:auto;
+
+}
+
+.col-md-6{
+    margin:auto;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.CodeMirror{
+    height:auto;
+}

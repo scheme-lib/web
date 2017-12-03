@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" width="600" height="500">
+<rect x="200" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="210" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="220" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="230" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="240" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="250" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="260" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="270" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="280" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="290" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="300" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<ellipse cx="250" cy="250" rx="100" ry="150" style="fill:rgb(229,204,178);"/>
+<circle cx="200" cy="200" r="20" style="fill:rgb(0,0,127);"/>
+<circle cx="200" cy="200" r="10" style="fill:rgb(255,255,255);"/>
+<circle cx="200" cy="200" r="5" style="fill:rgb(0,0,0);"/>
+<rect x="180" y="180" width="40" height="3" style="fill:rgb(0,0,0);"/>
+<circle cx="260" cy="200" r="20" style="fill:rgb(0,0,127);"/>
+<circle cx="260" cy="200" r="10" style="fill:rgb(255,255,255);"/>
+<circle cx="260" cy="200" r="5" style="fill:rgb(0,0,0);"/>
+<rect x="240" y="180" width="40" height="3" style="fill:rgb(0,0,0);"/>
+<ellipse cx="230" cy="250" rx="10" ry="20" style="fill:rgb(178,76,51);"/>
+<ellipse cx="230" cy="350" rx="40" ry="10" style="fill:rgb(178,76,51);"/>
+<ellipse cx="230" cy="350" rx="30" ry="5" style="fill:rgb(229,127,102);"/>
+<rect x="400" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="410" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="420" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="430" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="440" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="450" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="460" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="470" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="480" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="490" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<rect x="500" y="90" width="2" height="50" style="fill:rgb(0,0,0);"/>
+<ellipse cx="450" cy="250" rx="100" ry="150" style="fill:rgb(229,204,178);"/>
+<circle cx="400" cy="200" r="20" style="fill:rgb(0,0,127);"/>
+<circle cx="400" cy="200" r="10" style="fill:rgb(255,255,255);"/>
+<circle cx="400" cy="200" r="5" style="fill:rgb(0,0,0);"/>
+<rect x="380" y="180" width="40" height="3" style="fill:rgb(0,0,0);"/>
+<circle cx="460" cy="200" r="20" style="fill:rgb(0,0,127);"/>
+<circle cx="460" cy="200" r="10" style="fill:rgb(255,255,255);"/>
+<circle cx="460" cy="200" r="5" style="fill:rgb(0,0,0);"/>
+<rect x="440" y="180" width="40" height="3" style="fill:rgb(0,0,0);"/>
+<ellipse cx="430" cy="250" rx="10" ry="20" style="fill:rgb(178,76,51);"/>
+<ellipse cx="430" cy="350" rx="40" ry="10" style="fill:rgb(178,76,51);"/>
+<ellipse cx="430" cy="350" rx="30" ry="5" style="fill:rgb(229,127,102);"/>
+
+</svg>
+</body>
+</html>
